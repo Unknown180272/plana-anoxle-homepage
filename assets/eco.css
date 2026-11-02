@@ -1,0 +1,8 @@
+/* Anoxle Light: preserves layout, colors, images and static glow.
+   Suppress perpetual CSS animations (costly across multiple open tabs).
+   Keep hover transitions and interactive controls functional. */
+html:not(.booting) *, html:not(.booting) *::before, html:not(.booting) *::after {
+  animation-iteration-count: 1 !important;
+}
+/* Skip offscreen widget painting until needed. */
+#studio-sheet:not(.open) { content-visibility: auto; }
